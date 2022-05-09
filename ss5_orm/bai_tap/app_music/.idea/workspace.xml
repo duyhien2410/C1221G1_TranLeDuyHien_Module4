@@ -5,7 +5,110 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97596cca-7457-404f-bcec-2186077befc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/modules/product_management_use_orm.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/repository/IProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/repository/impl/BaseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/classes/java/main/com/codegym/service/impl/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/libs/product_management_use_orm-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/resources/main/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/repository/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/repository/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_use_orm/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/modules/update-product-management.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/model/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/repository/IProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/repository/impl/BaseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/classes/java/main/com/codegym/service/impl/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/libs/update-product-management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/resources/main/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/repository/impl/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/repository/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/views/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../update-product-management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +297,10 @@
       <updated>1652068773512</updated>
       <workItem from="1652068775187" duration="3134000" />
       <workItem from="1652077866448" duration="2993000" />
-      <workItem from="1652080914795" duration="3182000" />
+      <workItem from="1652080914795" duration="7858000" />
+      <workItem from="1652088978228" duration="1931000" />
+      <workItem from="1652092793234" duration="3973000" />
+      <workItem from="1652106525300" duration="3133000" />
     </task>
     <servers />
   </component>
