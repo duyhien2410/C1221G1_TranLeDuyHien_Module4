@@ -5,6 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97596cca-7457-404f-bcec-2186077befc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/AppBlogApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/controller/AppBlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/model/AppBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/model/BlogType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/repository/IBlogTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/service/IAppBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/service/IBlogTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/service/impl/AppBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/java/com/codegym/service/impl/BlogTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/main/resources/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_spring_boot_and_spring_data_jpa/bai_tap/app_blog/src/test/java/com/codegym/AppBlogApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -199,7 +221,9 @@
       <workItem from="1652088978228" duration="1931000" />
       <workItem from="1652092793234" duration="3973000" />
       <workItem from="1652106525300" duration="3135000" />
-      <workItem from="1652145175563" duration="365000" />
+      <workItem from="1652145175563" duration="526000" />
+      <workItem from="1652153401554" duration="1828000" />
+      <workItem from="1652163792650" duration="3137000" />
     </task>
     <servers />
   </component>
