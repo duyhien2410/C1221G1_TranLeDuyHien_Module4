@@ -4,13 +4,15 @@ import com.codegym.model.AppMusic;
 import com.codegym.repository.IAppMusicRepository;
 import com.codegym.repository.impl.AppMusicRepository;
 import com.codegym.service.IAppMusicService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class AppMusicService implements IAppMusicService {
-    IAppMusicRepository appMusicRepository = new AppMusicRepository();
+    @Autowired
+    private IAppMusicRepository appMusicRepository;
 
     @Override
     public List<AppMusic> listAll() {
