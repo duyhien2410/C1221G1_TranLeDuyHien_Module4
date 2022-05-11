@@ -15,9 +15,6 @@ public interface IAppBlogService {
 
     AppBlog findById(int id);
 
-//    List<AppBlog> listSearch(String name);
-
     Page<AppBlog> listSearchByName(String keywordVal, Pageable pageable);
 
-//    Page<AppBlog> listPage(Pageable pageable);
 }

@@ -3,6 +3,7 @@ package com.codegym.controller;
 import com.codegym.model.AppBlog;
 import com.codegym.service.IAppBlogService;
 import com.codegym.service.IBlogTypeService;
+import org.hibernate.annotations.OrderBy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -29,9 +30,7 @@ public class AppBlogController {
                              @RequestParam Optional<String> keyword) {
         String keywordVal = keyword.orElse("");
 
-        model.addAttribute("typeBlog", this.blogTypeService.findAll());
         model.addAttribute("blog", this.appBlogService.listSearchByName(keywordVal, pageable));
-//        model.addAttribute("blog", this.appBlogService.listPage(pageable));
         model.addAttribute("keywordVal", keywordVal);
 
         return "list";
