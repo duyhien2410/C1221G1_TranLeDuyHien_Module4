@@ -20,7 +20,12 @@ public class SongService implements ISongService {
     }
 
     @Override
-    public void create(Song song) {
+    public void save(Song song) {
         this.songRepository.save(song);
+    }
+
+    @Override
+    public Song findById(int id) {
+        return this.songRepository.findById(id).orElse(null);
     }
 }

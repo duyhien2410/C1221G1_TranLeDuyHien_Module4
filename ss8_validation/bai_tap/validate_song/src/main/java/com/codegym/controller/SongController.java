@@ -14,6 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class SongController {
@@ -45,7 +46,34 @@ public class SongController {
         } else {
             Song song = new Song();
             BeanUtils.copyProperties(songDto, song);
-            songService.create(song);
+            songService.save(song);
+        }
+
+        return "redirect:/list";
+    }
+
+    @GetMapping("/edit")
+    public String goUpdate(@RequestParam("id") int id,
+                           Model model) {
+        SongDto songDto = new SongDto();
+        BeanUtils.copyProperties(this.songService.findById(id),songDto);
+
+        model.addAttribute("songDto", songDto);
+        return "update";
+    }
+
+    @PostMapping("/edit")
+    public String update(@ModelAttribute @Validated SongDto songDto,
+                         BindingResult bindingResult) {
+
+        new SongDto().validate(songDto,bindingResult);
+
+        if (bindingResult.hasFieldErrors()) {
+            return "update";
+        } else {
+            Song song = new Song();
+            BeanUtils.copyProperties(songDto, song);
+            songService.save(song);
         }
 
         return "redirect:/list";

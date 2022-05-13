@@ -17,6 +17,7 @@
             <th>Name of Song</th>
             <th>Singer</th>
             <th>Category</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +26,11 @@
             <td th:text="${songObj.nameSong}"></td>
             <td th:text="${songObj.singer}"></td>
             <td th:text="${songObj.category}"></td>
+            <td>
+                <button>
+                    <a th:href="@{/edit(id=${songObj.idSong})}">Edit</a>
+                </button>
+            </td>
         </tr>
         </tbody>
     </table>
