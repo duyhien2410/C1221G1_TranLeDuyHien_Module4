@@ -2,25 +2,27 @@ package com.codegym.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.lang.annotation.Annotation;
 
 public class SongDto implements Validator {
     private Integer idSong;
 
     @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     @Size(max = 800, message = "{size.invalid}")
     @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$", message = "{char.invalid}")
     private String nameSong;
     @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     @Size(max = 300, message = "{size2.invalid}")
     @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$", message = "{char.invalid}")
     private String singer;
     @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     @Size(max = 1000, message = "{size3.invalid}")
     @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*[,]*)+$", message = "{char2.invalid}")
     private String category;

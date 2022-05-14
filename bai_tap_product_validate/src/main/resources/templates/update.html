@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Update Product</h3>
+<h4><a href="/list">List of Product</a></h4>
+
+<form action="/edit" method="post" th:object="${productDto}">
+    <fieldset>
+        <legend><h3>Update Product</h3></legend>
+        <input type="hidden" th:field="*{idProduct}">
+
+        <div>
+            <label>Code of product:</label>
+            <td><input th:field="*{codeProduct}">
+                <p style="color: red" th:if="${#fields.hasErrors('codeProduct')}"
+                   th:errors="*{codeProduct}"></p>
+        </div>
+        <div>
+            <label>Name of product:</label>
+            <input th:field="*{nameProduct}">
+            <p style="color: red" th:if="${#fields.hasErrors('nameProduct')}"
+               th:errors="*{nameProduct}"></p>
+        </div>
+        <div>
+            <label>Price:</label>
+            <input th:field="*{price}">
+            <p style="color: red" th:if="${#fields.hasErrors('price')}"
+               th:errors="*{price}"></p>
+        </div>
+        <div>
+            <label>Description:</label>
+            <input th:field="*{description}">
+            <p style="color: red" th:if="${#fields.hasErrors('description')}"
+               th:errors="*{description}"></p>
+        </div>
+        <div>
+            <label>Manufacture:</label>
+            <input th:field="*{manufacture}">
+            <p style="color: red" th:if="${#fields.hasErrors('manufacture')}"
+               th:errors="*{manufacture}"></p>
+        </div>
+        <div>
+            <label>Category:</label>
+            <select th:field="*{category}">
+                <option th:each="typeObj :${category}"
+                        th:value="${typeObj.id}"
+                        th:text="${typeObj.name}">
+                </option>
+            </select>
+
+        </div>
+
+        <div>
+            <input type="submit" value="Update">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
