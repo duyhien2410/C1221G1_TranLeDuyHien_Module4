@@ -83,7 +83,7 @@ public class BookController {
     }
 
     @PostMapping("/pay")
-    public String payBook(@RequestParam String borrowed) throws NullPointerException {
+    public String payBook(@RequestParam String borrowed){
         BorrowedBook borrowedBook = borrowedBookService.findByBorrowedBook(borrowed);
         Book book = bookService.findById(borrowedBook.getBook().getId());
         book.setCurrentQuantity(book.getCurrentQuantity() + 1);
