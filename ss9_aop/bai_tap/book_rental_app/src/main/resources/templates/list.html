@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <th:block th:replace="~{layout :: css-head}">
+    </th:block>
 </head>
 <body>
-<div>
-    <h3><a th:href="@{/create}">Create new Book</a></h3>
-</div>
-<div>
-    <h4><a href="/list">List of Book</a></h4>
-</div>
-<div>
-    <h4><a href="/pay">Pay the book</a></h4>
-</div>
+<header th:replace="~{layout :: css-nav}">
+
+</header>
+
 
 <!--<div>-->
 <!--    <form action="/list" method="get">-->
@@ -23,12 +20,12 @@
 <!--        <input type="submit" value="search">-->
 <!--    </form>-->
 <!--</div>-->
-<div>
+<div class="container graphic-container">
     <div>
-        <table>
+        <table class="table table-view">
             <caption><h2>List of Book</h2></caption>
             <thead>
-            <tr>
+            <tr class="table-active">
                 <th>Id</th>
                 <th>Code of Book</th>
                 <th>Name of Book</th>
@@ -38,7 +35,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="bookObj :${book}">
+            <tr class="table-warning" th:each="bookObj :${book}">
                 <td th:text="${bookObj.id}"></td>
                 <td th:text="${bookObj.codeBook}"></td>
                 <td th:text="${bookObj.nameBook}"></td>
@@ -78,6 +75,12 @@
             </a>
         </div>
     </div>
+</div>
+
+<footer th:replace="~{layout :: css-footer}"></footer>
+
+<div th:replace="~{layout :: css-body}">
+
 </div>
 </body>
 </html>
