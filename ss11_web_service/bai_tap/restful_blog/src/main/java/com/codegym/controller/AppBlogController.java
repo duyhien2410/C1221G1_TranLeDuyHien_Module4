@@ -1,13 +1,16 @@
 package com.codegym.controller;
 
+import com.codegym.dto.AppBlogDto;
 import com.codegym.model.AppBlog;
 import com.codegym.service.IAppBlogService;
 import com.codegym.service.IBlogTypeService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,12 +28,9 @@ public class AppBlogController {
 
     @GetMapping("/list")
     public String goListBlog(Model model,
-                             @PageableDefault(value = 2, sort = {}) Pageable pageable,
-                             @RequestParam Optional<String> keyword) {
-        String keywordVal = keyword.orElse("");
+                             @PageableDefault(value = 2) Pageable pageable) {
 
-        model.addAttribute("blog", this.appBlogService.listSearchByName(keywordVal, pageable));
-        model.addAttribute("keywordVal", keywordVal);
+        model.addAttribute("blog", this.appBlogService.findAll(pageable));
 
         return "list";
     }
@@ -38,14 +38,17 @@ public class AppBlogController {
     @GetMapping("/create")
     public String goCreate(Model model) {
         model.addAttribute("typeBlog", this.blogTypeService.findAll());
-        model.addAttribute("blog", new AppBlog());
+        model.addAttribute("blogDto", new AppBlogDto());
 
         return "create";
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute AppBlog appMusic) {
-        this.appBlogService.save(appMusic);
+    public String create(@ModelAttribute AppBlogDto appBlogDto) {
+
+        AppBlog appBlog = new AppBlog();
+        BeanUtils.copyProperties(appBlogDto, appBlog);
+        appBlogService.save(appBlog);
 
         return "redirect:/list";
     }
@@ -59,8 +62,12 @@ public class AppBlogController {
 
     @GetMapping("/edit")
     public String goUpdate(@RequestParam("id") int id, Model model) {
-        model.addAttribute("typeBlog", this.blogTypeService.findAll());
-        model.addAttribute("blog", this.appBlogService.findById(id));
+        AppBlogDto appBlogDto = new AppBlogDto();
+        BeanUtils.copyProperties(this.appBlogService.findById(id), appBlogDto);
+
+        model.addAttribute("category", this.blogTypeService.findAll());
+        model.addAttribute("appBlogDto", appBlogDto);
+
         return "update";
     }
 
@@ -70,17 +77,6 @@ public class AppBlogController {
         return "redirect:/list";
     }
 
-//    @GetMapping("/search")
-//    public String search(@RequestParam("name") String name,
-//                         @PageableDefault(value = 2) Pageable pageable,
-//                         @RequestParam Optional<String> keyword,
-//                         Model model){
-//
-//
-//
-//        model.addAttribute("blog", this.appBlogService.listSearchByName(name, pageable));
-//
-//        return "/list";
-//    }
+
 
 }

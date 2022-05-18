@@ -29,21 +29,6 @@ public class CartDto {
         }
     }
 
-//    //đếm số lượng sản phẩm đó hiện có trong giỏ hàng
-//    public Integer countProductQuantity() {
-//        Integer productQuantity = 0;
-//        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-//            productQuantity += entry.getValue();
-//        }
-//        return productQuantity;
-//    }
-//
-//    //đếm số lượng sản phẩm có trong giỏ hàng
-//    public Integer countItemQuantity() {
-//        return productMap.size();
-//    }
-//
-//    //tính tổng số tiền cần phải thanh toán
     public Float countTotalPayment() {
         float payment = 0;
         for (Map.Entry<ProductDto, Integer> entry : productMap.entrySet()) {

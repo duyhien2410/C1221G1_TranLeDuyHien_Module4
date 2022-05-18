@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97ec3783-d05a-4250-946c-d5cbca81ca79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/dto/CartDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/resources/templates/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/resources/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10_session_cookie/bai_tap/cart/src/main/resources/templates/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/controller/AppBlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/controller/AppBlogRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/dto/AppBlogDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/model/AppBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/model/BlogType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/repository/IBlogTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/IAppBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/IBlogTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/impl/AppBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/impl/BlogTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/controller/AppBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/controller/AppBlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,10 @@
       <workItem from="1652708043073" duration="4435000" />
       <workItem from="1652749407756" duration="7578000" />
       <workItem from="1652777040639" duration="2457000" />
-      <workItem from="1652793311464" duration="2621000" />
+      <workItem from="1652793311464" duration="2622000" />
+      <workItem from="1652836306406" duration="635000" />
+      <workItem from="1652844516293" duration="902000" />
+      <workItem from="1652861978255" duration="7000" />
     </task>
     <servers />
   </component>
