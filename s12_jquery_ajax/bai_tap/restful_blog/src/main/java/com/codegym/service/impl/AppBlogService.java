@@ -31,7 +31,7 @@ public class AppBlogService implements IAppBlogService {
     }
 
     @Override
-    public Page<AppBlog> findAllAndSearch(String name, Pageable pageable) {
-        return this.appBlogRepository.findAllByNameBlogContaining(name, pageable);
+    public Page<AppBlog> findAll(Pageable pageable) {
+        return this.appBlogRepository.findAll( pageable);
     }
 }

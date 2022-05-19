@@ -14,5 +14,5 @@ public interface IAppBlogService {
 
     AppBlog findById(int id);
 
-    Page<AppBlog> findAllAndSearch(String name, Pageable pageable);
+    Page<AppBlog> findAll(Pageable pageable);
 }

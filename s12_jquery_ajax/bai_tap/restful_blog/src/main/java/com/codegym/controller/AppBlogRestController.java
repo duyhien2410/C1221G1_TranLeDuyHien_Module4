@@ -20,7 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/blog-rest")
 public class AppBlogRestController {
@@ -28,11 +27,8 @@ public class AppBlogRestController {
     private IAppBlogService appBlogService;
 
     @GetMapping("/list")
-    public ResponseEntity<Page<AppBlog>> getPageBlog(@PageableDefault(value = 3)Pageable pageable,
-                                                     @RequestParam Optional<String> name){
-        String nameVal = name.orElse("");
-
-        Page<AppBlog> blogPage = this.appBlogService.findAllAndSearch(nameVal, pageable);
+    public ResponseEntity<Page<AppBlog>> getPageBlog(@PageableDefault(value = 3)Pageable pageable){
+        Page<AppBlog> blogPage = this.appBlogService.findAll(pageable);
 
         if (!blogPage.hasContent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -49,10 +45,10 @@ public class AppBlogRestController {
         }
 
         AppBlog appBlog = new AppBlog();
-//        BlogType blogType = new BlogType();
-//        blogType.setId(appBlogDto.getBlogType().getId());
-//
-//        appBlog.setBlogType(blogType);
+        BlogType blogType = new BlogType();
+        blogType.setId(appBlogDto.getBlogType().getId());
+
+        appBlog.setBlogType(blogType);
         BeanUtils.copyProperties(appBlogDto, appBlog);
 
         this.appBlogService.save(appBlog);
@@ -69,7 +65,4 @@ public class AppBlogRestController {
         }
         return new ResponseEntity<>(optionalAppBlog.get(),HttpStatus.OK);
     }
-
-
-
 }

@@ -28,12 +28,9 @@ public class AppBlogController {
 
     @GetMapping("/list")
     public String goListBlog(Model model,
-                             @PageableDefault(value = 2) Pageable pageable,
-                             @RequestParam Optional<String> name) {
-        String nameVal = name.orElse("");
+                             @PageableDefault(value = 2) Pageable pageable) {
 
-        model.addAttribute("blog", this.appBlogService.findAllAndSearch(nameVal, pageable));
-        model.addAttribute("nameVal",nameVal);
+        model.addAttribute("blog", this.appBlogService.findAll(pageable));
 
         return "list";
     }
