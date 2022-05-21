@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97ec3783-d05a-4250-946c-d5cbca81ca79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/controller/AppBlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/controller/AppBlogRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/dto/AppBlogDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/model/AppBlog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/model/BlogType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/repository/IBlogTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/IAppBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/IBlogTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/impl/AppBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/java/com/codegym/service/impl/BlogTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss11_web_service/bai_tap/restful_blog/src/main/resources/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/model/SmartPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/repository/ISmartPhoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/service/ISmartPhoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/service/impl/SmartPhoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/controller/AppBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/controller/AppBlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_paging_and_sorting/bai_tap/update_app_blog/src/main/java/com/codegym/repository/IAppBlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +100,7 @@
       <workItem from="1652836306406" duration="635000" />
       <workItem from="1652844516293" duration="902000" />
       <workItem from="1652861978255" duration="7000" />
+      <workItem from="1653020679074" duration="22000" />
     </task>
     <servers />
   </component>

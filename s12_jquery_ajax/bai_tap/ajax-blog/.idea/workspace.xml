@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52640476-bc8b-4868-abf3-78e5e62b3ffe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/model/SmartPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/repository/ISmartPhoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/service/ISmartPhoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/service/impl/SmartPhoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +83,7 @@
       <workItem from="1652935067843" duration="752000" />
       <workItem from="1652942019316" duration="11689000" />
       <workItem from="1652970898411" duration="1681000" />
+      <workItem from="1653031734401" duration="429000" />
     </task>
     <servers />
   </component>
