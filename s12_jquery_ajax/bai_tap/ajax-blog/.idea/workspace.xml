@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52640476-bc8b-4868-abf3-78e5e62b3ffe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/model/SmartPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/repository/ISmartPhoneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/service/ISmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/java/com/codegym/service/impl/SmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap_2/phone_management/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog/ajax-blog" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -84,6 +76,7 @@
       <workItem from="1652942019316" duration="11689000" />
       <workItem from="1652970898411" duration="1681000" />
       <workItem from="1653031734401" duration="429000" />
+      <workItem from="1653107261200" duration="12000" />
     </task>
     <servers />
   </component>
@@ -107,6 +100,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="207" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1652942037004" />
+    <state x="533" y="167" key="FileChooserDialogImpl" timestamp="1653107270252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="533" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1653107270252" />
     <state x="408" y="69" width="672" height="676" key="search.everywhere.popup" timestamp="1652944934445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
