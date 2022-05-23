@@ -1,8 +1,10 @@
 package com.codegym.dto.customer;
 
 import com.codegym.model.customer.CustomerType;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-public class CustomerDto {
+public class CustomerDto implements Validator {
     private Integer customerId;
     private CustomerType customerTypeId;
     private String customerName;
@@ -100,5 +102,15 @@ public class CustomerDto {
 
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+
     }
 }

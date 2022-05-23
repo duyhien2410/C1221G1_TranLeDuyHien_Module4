@@ -1,18 +1,99 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <th:block th:replace="~{layout :: css-layout}">
-    </th:block>
+    <meta charset="utf-8"/>
+   <th:block th:replace="~{layout :: css-layout}"></th:block>
 </head>
 <body>
-<div th:replace="~{layout :: css-nav}"></div>
+<header th:replace="~{layout :: css-header}">
 
-<div th:replace="~{layout :: css-nav}"></div>
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+
+</nav>
+<section class="page-section about-heading">
+    <div class="container">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-10 col-lg-11 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4 container">
+                            <span class="section-heading-upper">Furama Resort</span>
+                            <span class="section-heading-lower">Customer</span>
+                        </h2>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Create new customer</a></h4>
+
+                        <div class="container">
+                            <table class="table table-view">
+                                <caption class="text-black"><h4>List of Customer</h4></caption>
+                                <thead>
+                                <tr class="table-active">
+                                    <th>#</th>
+                                    <th>Id</th>
+                                    <th>Customer</th>
+                                    <th>Name</th>
+                                    <th>Birthday</th>
+                                    <th>Gender</th>
+                                    <th>Id card</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="table-warning" th:each="customerObj, no :${customer}">
+                                    <td th:text="${no.count}"></td>
+                                    <td th:text="${customerObj.customerId}"></td>
+                                    <td th:text="${customerObj.customerTypeId.customerTypeName}"></td>
+                                    <td th:text="${customerObj.customerName}"></td>
+                                    <td th:text="${customerObj.customerBirthday}"></td>
+                                    <td th:text="${customerObj.gender}"></td>
+                                    <td th:text="${customerObj.customerIdCard}"></td>
+                                    <td th:text="${customerObj.customerPhone}"></td>
+                                    <td th:text="${customerObj.customerAddress}"></td>
+
+                                    <!--                                <td>-->
+                                    <!--                                    <button>-->
+                                    <!--                                        <a th:href="@{/delete(id=${productObj.idProduct})}">Delete</a>-->
+                                    <!--                                    </button>-->
+                                    <!--                                </td>-->
+                                    <!--                                <td>-->
+                                    <!--                                    <button>-->
+                                    <!--                                        <a th:href="@{/edit(id=${productObj.idProduct})}">Edit</a>-->
+                                    <!--                                    </button>-->
+                                    <!--                                </td>-->
+                                </tr>
+
+                                </tbody>
 
 
-<footer th:replace="~{layout :: css-footer}"></footer>
+                            </table>
+                        </div>
+                        <div>
+                            <div>
+                                <a th:if="${customer.hasPrevious()}"
+                                   th:href="@{/list(page=${customer.number - 1})}">
+                                    Previous
+                                </a>
+                                <span th:text="${customer.number + 1}"></span>
+                                /
+                                <span th:text="${customer.totalPages}"></span>
+                                <a th:if="${customer.hasNext()}"
+                                   th:href="@{/list(page=${customer.number + 1})}">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
 
 <div th:replace="~{layout :: css-body}"></div>
 

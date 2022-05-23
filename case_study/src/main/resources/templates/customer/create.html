@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
+</head>
+<body>
+<header th:replace="~{layout :: css-header}">
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+</nav>
+<section class="page-section about-heading">
+    <div class="container">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-10 col-lg-11 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4 container">
+                            <span class="section-heading-upper">Furama Resort</span>
+                            <span class="section-heading-lower">Customer</span>
+                        </h2>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">List of customer</a></h4>
+
+                        <div class="container">
+                            <form th:action="@{/customers/create}" th:object="${customerDto}" method="post">
+                                <fieldset>
+                                    <legend><h3>Create new customer</h3></legend>
+                                    <table>
+                                        <tr>
+                                            <th>Customer type:</th>
+                                            <td>
+                                                <select th:field="*{customerTypeId}">
+                                                    <option th:each="typeObj :${customerType}"
+                                                            th:value="${typeObj.customerTypeId}"
+                                                            th:text="${typeObj.customerTypeName}">
+                                                    </option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Name of customer:</th>
+                                            <td><input th:field="*{customerName}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerName')}"
+                                                   th:errors="*{customerName}"></p></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Birthday:</th>
+                                            <td><input type="date" th:field="*{customerBirthday}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
+                                                   th:errors="*{customerBirthday}"></p></td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Gender:</th>
+                                            <td><input th:field="*{gender}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('gender')}"
+                                                   th:errors="*{gender}"></p></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Id card:</th>
+                                            <td><input th:field="*{customerIdCard}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}"
+                                                   th:errors="*{customerIdCard}"></p></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone:</th>
+                                            <td><input th:field="*{customerPhone}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}"
+                                                   th:errors="*{customerPhone}"></p></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Address:</th>
+                                            <td><input th:field="*{customerAddress}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}"
+                                                   th:errors="*{customerAddress}"></p></td>
+                                        </tr>
+
+
+
+                                    </table>
+                                    <div>
+                                        <input type="submit" value="Save">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

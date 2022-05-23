@@ -17,4 +17,9 @@ public class CustomerService implements ICustomerService {
     public Page<Customer> findAll(Pageable pageable) {
         return this.customerRepository.findAll(pageable);
     }
+
+    @Override
+    public void create(Customer customer) {
+        this.customerRepository.save(customer);
+    }
 }
