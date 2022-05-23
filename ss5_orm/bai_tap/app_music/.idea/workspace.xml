@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97596cca-7457-404f-bcec-2186077befc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/bai_tap/book_rental_app/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +206,7 @@
       <workItem from="1652153401554" duration="1828000" />
       <workItem from="1652163792650" duration="3137000" />
       <workItem from="1652415012275" duration="101000" />
+      <workItem from="1653280748747" duration="15000" />
     </task>
     <servers />
   </component>
