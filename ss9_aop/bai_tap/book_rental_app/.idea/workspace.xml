@@ -5,40 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97ec3783-d05a-4250-946c-d5cbca81ca79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/dto/customer/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/repository/customer/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/repository/customer/ICustomerTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/customer/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/customer/ICustomerTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/customer/impl/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/customer/impl/CustomerTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/about.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/intro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/products-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/products-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/assets/img/products-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/static/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/store.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/validates.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss5_orm/bai_tap/app_music/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5_orm/bai_tap/app_music/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +96,7 @@
       <workItem from="1653020679074" duration="22000" />
       <workItem from="1653276827825" duration="3117000" />
       <workItem from="1653288132786" duration="2454000" />
+      <workItem from="1653302895638" duration="2000" />
     </task>
     <servers />
   </component>

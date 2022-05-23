@@ -19,7 +19,7 @@ public class CustomerController {
     @Autowired
     private ICustomerTypeRepository customerTypeRepository;
 
-    @GetMapping("/list")
+    @GetMapping()
     public String goListCustomer(Model model,
                                  @PageableDefault(value = 5) Pageable pageable) {
 
