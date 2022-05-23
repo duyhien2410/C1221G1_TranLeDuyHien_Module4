@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97ec3783-d05a-4250-946c-d5cbca81ca79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/controller/SmartPhoneRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/model/SmartPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/repository/ISmartPhoneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/service/ISmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/java/com/codegym/service/impl/SmartPhoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../s12_jquery_ajax/bai_tap_2/phone_management/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +97,7 @@
       <workItem from="1652844516293" duration="902000" />
       <workItem from="1652861978255" duration="7000" />
       <workItem from="1653020679074" duration="22000" />
+      <workItem from="1653276827825" duration="928000" />
     </task>
     <servers />
   </component>
