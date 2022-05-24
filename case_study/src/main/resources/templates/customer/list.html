@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
-   <th:block th:replace="~{layout :: css-layout}"></th:block>
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
 </head>
 <body>
 <header th:replace="~{layout :: css-header}">
@@ -22,7 +22,8 @@
                             <span class="section-heading-upper">Furama Resort</span>
                             <span class="section-heading-lower">Customer</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Create new customer</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Create new
+                            customer</a></h4>
 
                         <div class="container">
                             <table class="table table-view">
@@ -38,6 +39,7 @@
                                     <th>Id card</th>
                                     <th>Phone</th>
                                     <th>Address</th>
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -47,21 +49,24 @@
                                     <td th:text="${customerObj.customerTypeId.customerTypeName}"></td>
                                     <td th:text="${customerObj.customerName}"></td>
                                     <td th:text="${customerObj.customerBirthday}"></td>
-                                    <td th:text="${customerObj.gender}"></td>
+                                    <td th:if="${customerObj.gender==0}" th:text="Nữ"></td>
+                                    <td th:if="${customerObj.gender==1}" th:text="Nam"></td>
                                     <td th:text="${customerObj.customerIdCard}"></td>
                                     <td th:text="${customerObj.customerPhone}"></td>
                                     <td th:text="${customerObj.customerAddress}"></td>
 
-                                    <!--                                <td>-->
-                                    <!--                                    <button>-->
-                                    <!--                                        <a th:href="@{/delete(id=${productObj.idProduct})}">Delete</a>-->
-                                    <!--                                    </button>-->
-                                    <!--                                </td>-->
+                                    <td>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                                                th:attr="onclick=|deleteModal('${customerObj.customerId}', '${customerObj.customerName}')|">
+                                            Delete
+                                        </button>
+                                    </td>
                                     <!--                                <td>-->
                                     <!--                                    <button>-->
                                     <!--                                        <a th:href="@{/edit(id=${productObj.idProduct})}">Edit</a>-->
                                     <!--                                    </button>-->
                                     <!--                                </td>-->
+
                                 </tr>
 
                                 </tbody>
@@ -72,14 +77,14 @@
                         <div>
                             <div>
                                 <a th:if="${customer.hasPrevious()}"
-                                   th:href="@{/list(page=${customer.number - 1})}">
+                                   th:href="@{/customers(page=${customer.number - 1})}">
                                     Previous
                                 </a>
                                 <span th:text="${customer.number + 1}"></span>
                                 /
                                 <span th:text="${customer.totalPages}"></span>
                                 <a th:if="${customer.hasNext()}"
-                                   th:href="@{/list(page=${customer.number + 1})}">
+                                   th:href="@{/customers(page=${customer.number + 1})}">
                                     Next
                                 </a>
                             </div>
@@ -90,7 +95,37 @@
         </div>
     </div>
 </section>
+<form th:action="@{/customers/delete}">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="id-remove" name="customerId">
+                    Bạn có chắc chắn muốn xoá? <br>
+                    Khách hàng có tên:  <p id="name"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 
+
+<script>
+    function deleteModal(customerId, customerName) {
+        document.getElementById("id-remove").value = customerId;
+        document.getElementById("name").innerText = customerName;
+    }
+</script>
 
 <footer th:replace="~{layout :: css-footer}">
 </footer>

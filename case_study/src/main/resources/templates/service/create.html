@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
+</head>
+<body>
+<header th:replace="~{layout :: css-header}">
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+</nav>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Furama Resort</span>
+                        <span class="section-heading-lower">Service</span>
+                    </h2>
+                    <h4 class="container"><a class="nav-link text-primary" th:href="@{/services}">List of service</a></h4>
+
+                    <div class="list-unstyled list-hours mb-5 text-left mx-auto">
+                        <form th:action="@{/services/create}" th:object="${serviceDto}" method="post">
+                            <fieldset>
+                                <legend><h3>Create new service</h3></legend>
+                                <table>
+
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Name of service:</th>
+                                        <td><input class="form-control" th:field="*{serviceName}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('serviceName')}"
+                                               th:errors="*{serviceName}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Area:</th>
+                                        <td><input class="form-control" width="200" th:field="*{serviceArea}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('serviceArea')}"
+                                               th:errors="*{serviceArea}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Cost:</th>
+                                        <td><input class="form-control" th:field="*{serviceCost}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('serviceCost')}"
+                                               th:errors="*{serviceCost}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Max people:</th>
+                                        <td><input class="form-control" th:field="*{serviceMaxPeople}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('serviceMaxPeople')}"
+                                               th:errors="*{serviceMaxPeople}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Rent type:</th>
+                                        <td>
+                                            <select class="form-select" th:field="*{rentTypeId}">
+                                                <option th:each="typeObj :${rentType}"
+                                                        th:value="${typeObj.rentTypeId}"
+                                                        th:text="${typeObj.rentTypeName}">
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Service type:</th>
+                                        <td>
+                                            <select class="form-select" th:field="*{serviceTypeId}">
+                                                <option th:each="typeObj :${serviceType}"
+                                                        th:value="${typeObj.serviceTypeId}"
+                                                        th:text="${typeObj.serviceTypeName}">
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Standard room:</th>
+                                        <td><input class="form-control" th:field="*{standardRoom}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('standardRoom')}"
+                                               th:errors="*{standardRoom}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Other:</th>
+                                        <td><input class="form-control" th:field="*{descriptionOther}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('descriptionOther')}"
+                                               th:errors="*{descriptionOther}"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Number of floors:</th>
+                                        <td><input class="form-control" th:field="*{numberOfFloors}">
+                                            <p style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}"
+                                               th:errors="*{numberOfFloors}"></p></td>
+                                    </tr>
+
+
+
+                                </table>
+                                <div>
+                                    <input class="btn btn-success" type="submit" value="Save">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <p class="address mb-5">
+                        <em>
+                            <strong>103 – 105 Đường Võ Nguyên Giáp</strong>
+                            <br />
+                            Tp. Đà Nẵng, Việt Nam
+                        </em>
+                    </p>
+                    <p class="mb-0">
+                        <small><em>Call Anytime</em></small>
+                        <br />
+                        84-236-3847 333/888
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section about-heading">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" th:src="@{/assets/img/service.jpg}" alt="..." />
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
+                            <span class="section-heading-lower">About Our Cafe</span>
+                        </h2>
+                        <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our café.</p>
+                        <p class="mb-0">
+                            We guarantee that you will fall in
+                            <em>lust</em>
+                            with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
+
+<div th:replace="~{layout :: css-body}"></div>
+</body>
+</html>

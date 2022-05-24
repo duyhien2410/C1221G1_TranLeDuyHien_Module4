@@ -30,7 +30,8 @@
                                         <tr>
                                             <th>Customer type:</th>
                                             <td>
-                                                <select th:field="*{customerTypeId}">
+                                                <select class="form-select" aria-label="Default select example"
+                                                        th:field="*{customerTypeId}">
                                                     <option th:each="typeObj :${customerType}"
                                                             th:value="${typeObj.customerTypeId}"
                                                             th:text="${typeObj.customerTypeName}">
@@ -40,38 +41,42 @@
                                         </tr>
                                         <tr>
                                             <th>Name of customer:</th>
-                                            <td><input th:field="*{customerName}">
+                                            <td><input class="form-control" th:field="*{customerName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerName')}"
                                                    th:errors="*{customerName}"></p></td>
                                         </tr>
                                         <tr>
                                             <th>Birthday:</th>
-                                            <td><input type="date" th:field="*{customerBirthday}">
+                                            <td><input class="form-select" type="date" th:field="*{customerBirthday}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
                                                    th:errors="*{customerBirthday}"></p></td>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Gender:</th>
-                                            <td><input th:field="*{gender}">
-                                                <p style="color: red" th:if="${#fields.hasErrors('gender')}"
-                                                   th:errors="*{gender}"></p></td>
+                                            <td>
+                                                <select class="form-select" th:field="*{gender}">
+                                                    <option value=0>Nữ</option>
+                                                    <option value=1>Nam</option>
+                                                </select>
+<!--                                                <p style="color: red" th:if="${#fields.hasErrors('gender')}"-->
+<!--                                                   th:errors="*{gender}"></p></td>-->
                                         </tr>
                                         <tr>
                                             <th>Id card:</th>
-                                            <td><input th:field="*{customerIdCard}">
+                                            <td><input class="form-control" th:field="*{customerIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}"
                                                    th:errors="*{customerIdCard}"></p></td>
                                         </tr>
                                         <tr>
                                             <th>Phone:</th>
-                                            <td><input th:field="*{customerPhone}">
+                                            <td><input class="form-control" th:field="*{customerPhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}"
                                                    th:errors="*{customerPhone}"></p></td>
                                         </tr>
                                         <tr>
                                             <th>Address:</th>
-                                            <td><input th:field="*{customerAddress}">
+                                            <td><input class="form-control" th:field="*{customerAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}"
                                                    th:errors="*{customerAddress}"></p></td>
                                         </tr>
@@ -80,7 +85,7 @@
 
                                     </table>
                                     <div>
-                                        <input type="submit" value="Save">
+                                        <input class="btn btn-success" type="submit" value="Save">
                                     </div>
                                 </fieldset>
                             </form>
@@ -92,5 +97,11 @@
         </div>
     </div>
 </section>
+
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
+
+<div th:replace="~{layout :: css-body}"></div>
 </body>
 </html>

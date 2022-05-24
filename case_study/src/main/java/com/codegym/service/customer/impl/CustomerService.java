@@ -22,4 +22,14 @@ public class CustomerService implements ICustomerService {
     public void create(Customer customer) {
         this.customerRepository.save(customer);
     }
+
+    @Override
+    public void delete(int id) {
+        this.customerRepository.deleteById(id);
+    }
+
+    @Override
+    public Customer findById(int id) {
+        return this.customerRepository.findById(id).orElse(null);
+    }
 }
