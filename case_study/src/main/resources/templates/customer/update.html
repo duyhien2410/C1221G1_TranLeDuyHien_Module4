@@ -20,15 +20,19 @@
                             <span class="section-heading-upper">Furama Resort</span>
                             <span class="section-heading-lower">Customer</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">List of customer</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">List of
+                            customer</a></h4>
+
 
                         <div class="container">
-                            <form th:action="@{/customers/create}" th:object="${customerDto}" method="post">
+                            <form th:action="@{/customers/edit}" th:object="${customerDto}" method="post">
                                 <fieldset>
-                                    <legend><h3>Create new customer</h3></legend>
+                                    <legend><h3>Update Customer</h3></legend>
+                                    <input type="hidden" th:field="*{customerId}">
+
                                     <table>
                                         <tr>
-                                            <th>Customer type:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Customer type:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{customerTypeId}">
@@ -40,62 +44,87 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Name of customer:</th>
-                                            <td><input class="form-control" th:field="*{customerName}">
+                                            <th class="list-unstyled-item list-hours-item d-flex">Name of customer:</th>
+                                            <td>
+                                                <input class="form-control" th:field="*{customerName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerName')}"
-                                                   th:errors="*{customerName}"></p></td>
-                                        </tr>
-                                        <tr>
-                                            <th>Birthday:</th>
-                                            <td><input class="form-select" type="date" th:field="*{customerBirthday}">
-                                                <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
-                                                   th:errors="*{customerBirthday}"></p></td>
+                                                   th:errors="*{customerName}"></p>
                                             </td>
+
                                         </tr>
                                         <tr>
-                                            <th>Gender:</th>
+
+                                            <th class="list-unstyled-item list-hours-item d-flex">Birthday:</th>
+                                            <td>
+                                                <input class="form-control" type="date" th:field="*{customerBirthday}">
+                                                <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
+                                                   th:errors="*{customerBirthday}"></p>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Gender:</th>
                                             <td>
                                                 <select class="form-select" th:field="*{gender}">
                                                     <option value=0>Nữ</option>
                                                     <option value=1>Nam</option>
                                                 </select>
-<!--                                                <p style="color: red" th:if="${#fields.hasErrors('gender')}"-->
-<!--                                                   th:errors="*{gender}"></p></td>-->
+                                            </td>
+
                                         </tr>
                                         <tr>
-                                            <th>Id card:</th>
-                                            <td><input class="form-control" th:field="*{customerIdCard}">
+                                            <th class="list-unstyled-item list-hours-item d-flex">Id card:</th>
+                                            <td>
+                                                <input class="form-control" th:field="*{customerIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}"
-                                                   th:errors="*{customerIdCard}"></p></td>
+                                                   th:errors="*{customerIdCard}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
-                                            <th>Phone:</th>
-                                            <td><input class="form-control" th:field="*{customerPhone}">
+                                            <th class="list-unstyled-item list-hours-item d-flex">Phone:</th>
+                                            <td>
+                                                <input class="form-control" th:field="*{customerPhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}"
-                                                   th:errors="*{customerPhone}"></p></td>
+                                                   th:errors="*{customerPhone}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
-                                            <th>Email:</th>
-                                            <td><input class="form-control" th:field="*{customerEmail}">
+                                            <th class="list-unstyled-item list-hours-item d-flex">Email:</th>
+                                            <td>
+                                                <input class="form-control" th:field="*{customerEmail}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerEmail')}"
-                                                   th:errors="*{customerEmail}"></p></td>
+                                                   th:errors="*{customerEmail}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
-                                            <th>Address:</th>
-                                            <td><input class="form-control" th:field="*{customerAddress}">
+                                            <th class="list-unstyled-item list-hours-item d-flex">Address:</th>
+                                            <td>
+                                                <input class="form-control" th:field="*{customerAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}"
-                                                   th:errors="*{customerAddress}"></p></td>
+                                                   th:errors="*{customerAddress}"></p>
+                                            </td>
+
                                         </tr>
 
 
+                                        <tr>
+                                            <th class="list-unstyled-item list-hours-item d-flex"></th>
+                                            <td>
+                                                <input class="btn btn-success" type="submit" value="Update">
+                                            </td>
+                                        </tr>
 
                                     </table>
-                                    <div>
-                                        <input class="btn btn-success" type="submit" value="Save">
-                                    </div>
                                 </fieldset>
                             </form>
+
+
                         </div>
+
 
                     </div>
                 </div>

@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8"/>
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
 </head>
 <body>
+<header th:replace="~{layout :: css-header}">
+
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+
+</nav>
+<section class="page-section about-heading">
+    <div class="container">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4 container">
+                            <span class="section-heading-upper">Furama Resort</span>
+                            <span class="section-heading-lower">Employee</span>
+                        </h2>
+                        <div>
+                            <form th:action="@{/employees}">
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2">
+                                        <input  class="form-control" type="search" name="name" placeholder="search name">
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2">
+                                        <input  class="form-control" type="search" name="email"
+                                                placeholder="search email">
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2">
+                                        <select class="form-select" name="division">
+                                            <option value="">--Division--</option>
+                                            <option th:each="divObj :${divisions}"
+                                                    th:value="${divObj.divisionId}"
+                                                    th:text="${divObj.divisionName}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <input class="btn btn-success" type="submit" value="search">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees/create}">Create new
+                            employee</a></h4>
+
+                        <div>
+                            <table class="table table-striped">
+                                <caption class="text-black"><h4>List of Employee</h4></caption>
+                                <thead>
+                                <tr class="table-active">
+                                    <th>#</th>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Birthday</th>
+                                    <th>Id card</th>
+                                    <th>Salary</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Position</th>
+                                    <th>Degree</th>
+                                    <th>Division</th>
+                                    <th>Delete</th>
+                                    <th>Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="table-warning" th:each="employeeObj, no :${employees}">
+                                    <td th:text="${no.count}"></td>
+                                    <td th:text="${employeeObj.employeeId}"></td>
+                                    <td th:text="${employeeObj.employeeName}"></td>
+                                    <td th:text="${employeeObj.employeeBirthday}"></td>
+                                    <td th:text="${employeeObj.employeeIdCard}"></td>
+                                    <td th:text="${employeeObj.employeeSalary}"></td>
+                                    <td th:text="${employeeObj.employeePhone}"></td>
+                                    <td th:text="${employeeObj.employeeEmail}"></td>
+                                    <td th:text="${employeeObj.employeeAddress}"></td>
+                                    <td th:text="${employeeObj.positionId.positionName}"></td>
+                                    <td th:text="${employeeObj.educationDegreeId.educationDegreeName}"></td>
+                                    <td th:text="${employeeObj.divisionId.divisionName}"></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
+                                                th:attr="onclick=|deleteModal('${employeeObj.employeeId}', '${employeeObj.employeeName}')|">
+                                            Delete
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-warning"
+                                           th:href="@{/employees/edit(id=${employeeObj.employeeId})}">Edit</a>
+                                    </td>
+
+                                </tr>
+
+                                </tbody>
+
+
+                            </table>
+                        </div>
+                        <div>
+                            <div>
+                                <a th:if="${employees.hasPrevious()}"
+                                   th:href="@{/employees(page=${employees.number - 1}, name=${nameVal}, email=${emailVal},
+                                   division=${divisionVal})}">
+                                    Previous
+                                </a>
+                                <span th:text="${employees.number + 1}"></span>
+                                /
+                                <span th:text="${employees.totalPages}"></span>
+                                <a th:if="${employees.hasNext()}"
+                                   th:href="@{/employees(page=${employees.number + 1}, name=${nameVal}, email=${emailVal},
+                                   division=${divisionVal})}">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<form th:action="@{/employees/delete}">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="id-remove" name="id">
+                    Bạn có chắc chắn muốn xoá? <br>
+                    Nhân viên có tên: <p id="name"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    function deleteModal(id, employeeName) {
+        document.getElementById("id-remove").value = id;
+        document.getElementById("name").innerText = employeeName;
+    }
+</script>
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
+
+<div th:replace="~{layout :: css-body}"></div>
 
 </body>
 </html>

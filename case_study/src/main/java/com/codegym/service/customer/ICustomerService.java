@@ -5,7 +5,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface ICustomerService {
-    Page<Customer> findAll(Pageable pageable);
+    Page<Customer> findAllAndSearch1(String name, String email, String type, Pageable pageable);
+
+    Page<Customer> findAllAndSearch2(String name, String email, Pageable pageable);
 
     void create(Customer customer);
 

@@ -16,17 +16,41 @@
     <div class="container">
         <div class="about-heading-content">
             <div class="row">
-                <div class="col-xl-10 col-lg-11 mx-auto">
+                <div class="col-xl-12 col-lg-12 mx-auto">
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
                             <span class="section-heading-lower">Customer</span>
                         </h2>
+                        <div>
+                            <form th:action="@{/customers}">
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2">
+                                        <input class="form-control" type="text" name="name" placeholder="search name">
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2">
+                                        <input class="form-control" type="text" name="email" placeholder="search email">
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2">
+                                        <select class="form-select" name="type">
+                                            <option value="">--Customer type--</option>
+                                            <option th:each="typeObj :${customerType}"
+                                                    th:value="${typeObj.customerTypeId}"
+                                                    th:text="${typeObj.customerTypeName}">
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <input class="btn btn-success" type="submit" value="search">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Create new
                             customer</a></h4>
 
-                        <div class="container">
-                            <table class="table table-view">
+                        <div>
+                            <table class="table table-striped">
                                 <caption class="text-black"><h4>List of Customer</h4></caption>
                                 <thead>
                                 <tr class="table-active">
@@ -38,8 +62,10 @@
                                     <th>Gender</th>
                                     <th>Id card</th>
                                     <th>Phone</th>
+                                    <th>Email</th>
                                     <th>Address</th>
                                     <th>Delete</th>
+                                    <th>Edit</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -53,19 +79,20 @@
                                     <td th:if="${customerObj.gender==1}" th:text="Nam"></td>
                                     <td th:text="${customerObj.customerIdCard}"></td>
                                     <td th:text="${customerObj.customerPhone}"></td>
+                                    <td th:text="${customerObj.customerEmail}"></td>
                                     <td th:text="${customerObj.customerAddress}"></td>
 
                                     <td>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"
                                                 th:attr="onclick=|deleteModal('${customerObj.customerId}', '${customerObj.customerName}')|">
                                             Delete
                                         </button>
                                     </td>
-                                    <!--                                <td>-->
-                                    <!--                                    <button>-->
-                                    <!--                                        <a th:href="@{/edit(id=${productObj.idProduct})}">Edit</a>-->
-                                    <!--                                    </button>-->
-                                    <!--                                </td>-->
+                                    <td>
+                                        <a class="btn btn-warning"
+                                           th:href="@{/customers/edit(id=${customerObj.customerId})}">Edit</a>
+                                    </td>
 
                                 </tr>
 
@@ -77,14 +104,16 @@
                         <div>
                             <div>
                                 <a th:if="${customer.hasPrevious()}"
-                                   th:href="@{/customers(page=${customer.number - 1})}">
+                                   th:href="@{/customers(page=${customer.number - 1}, name=${nameVal}, email=${emailVal},
+                                   type=${typeVal})}">
                                     Previous
                                 </a>
                                 <span th:text="${customer.number + 1}"></span>
                                 /
                                 <span th:text="${customer.totalPages}"></span>
                                 <a th:if="${customer.hasNext()}"
-                                   th:href="@{/customers(page=${customer.number + 1})}">
+                                   th:href="@{/customers(page=${customer.number + 1}, name=${nameVal}, email=${emailVal},
+                                   type=${typeVal})}">
                                     Next
                                 </a>
                             </div>
@@ -96,22 +125,23 @@
     </div>
 </section>
 <form th:action="@{/customers/delete}">
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" id="id-remove" name="customerId">
+                    <input type="hidden" id="id-remove" name="id">
                     Bạn có chắc chắn muốn xoá? <br>
-                    Khách hàng có tên:  <p id="name"></p>
+                    Khách hàng có tên: <p id="name"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </div>
             </div>
@@ -121,8 +151,8 @@
 
 
 <script>
-    function deleteModal(customerId, customerName) {
-        document.getElementById("id-remove").value = customerId;
+    function deleteModal(id, customerName) {
+        document.getElementById("id-remove").value = id;
         document.getElementById("name").innerText = customerName;
     }
 </script>

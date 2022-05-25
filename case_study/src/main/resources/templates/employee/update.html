@@ -20,56 +20,82 @@
                             <span class="section-heading-upper">Furama Resort</span>
                             <span class="section-heading-lower">Employee</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees}">List of employee</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees}">List of
+                            employee</a></h4>
+
 
                         <div class="container">
-                            <form th:action="@{/employees/create}" th:object="${employeeDto}" method="post">
+                            <form th:action="@{/employees/edit}" th:object="${employeeDto}" method="post">
                                 <fieldset>
-                                    <legend><h3>Create new employee</h3></legend>
+                                    <legend><h3>Update Employee</h3></legend>
+                                    <input type="hidden" th:field="*{employeeId}">
+
                                     <table>
 
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Name of employee:</th>
-                                            <td><input class="form-control" th:field="*{employeeName}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeeName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeName')}"
-                                                   th:errors="*{employeeName}"></p></td>
+                                                   th:errors="*{employeeName}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
+
                                             <th class="list-unstyled-item list-hours-item d-flex">Birthday:</th>
-                                            <td><input class="form-control" type="date" th:field="*{employeeBirthday}">
+                                            <td>
+                                                <input class="form-control" type="date" th:field="*{employeeBirthday}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeBirthday')}"
-                                                   th:errors="*{employeeBirthday}"></p></td>
+                                                   th:errors="*{employeeBirthday}"></p>
                                             </td>
+
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Id card:</th>
-                                            <td><input class="form-control" th:field="*{employeeIdCard}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeeIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeIdCard')}"
-                                                   th:errors="*{employeeIdCard}"></p></td>
+                                                   th:errors="*{employeeIdCard}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Salary:</th>
-                                            <td><input class="form-control" th:field="*{employeeSalary}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeeSalary}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeSalary')}"
-                                                   th:errors="*{employeeSalary}"></p></td>
+                                                   th:errors="*{employeeSalary}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Phone:</th>
-                                            <td><input class="form-control" th:field="*{employeePhone}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeePhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeePhone')}"
-                                                   th:errors="*{employeePhone}"></p></td>
+                                                   th:errors="*{employeePhone}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Email:</th>
-                                            <td><input class="form-control" th:field="*{employeeEmail}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeeEmail}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeEmail')}"
-                                                   th:errors="*{employeeEmail}"></p></td>
+                                                   th:errors="*{employeeEmail}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Address:</th>
-                                            <td><input class="form-control" th:field="*{employeeAddress}">
+                                            <td>
+                                                <input class="form-control" th:field="*{employeeAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeAddress')}"
-                                                   th:errors="*{employeeAddress}"></p></td>
+                                                   th:errors="*{employeeAddress}"></p>
+                                            </td>
+
                                         </tr>
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex">Position:</th>
@@ -84,13 +110,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Education Degree:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Degree:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{educationDegreeId}">
-                                                    <option th:each="eduObj :${educationDegree}"
-                                                            th:value="${eduObj.educationDegreeId}"
-                                                            th:text="${eduObj.educationDegreeName}">
+                                                    <option th:each="typeObj :${educationDegree}"
+                                                            th:value="${typeObj.educationDegreeId}"
+                                                            th:text="${typeObj.educationDegreeName}">
                                                     </option>
                                                 </select>
                                             </td>
@@ -100,22 +126,29 @@
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{divisionId}">
-                                                    <option th:each="divisionObj :${divisions}"
-                                                            th:value="${divisionObj.divisionId}"
-                                                            th:text="${divisionObj.divisionName}">
+                                                    <option th:each="typeObj :${divisions}"
+                                                            th:value="${typeObj.divisionId}"
+                                                            th:text="${typeObj.divisionName}">
                                                     </option>
                                                 </select>
                                             </td>
                                         </tr>
 
 
+                                        <tr>
+                                            <th class="list-unstyled-item list-hours-item d-flex"></th>
+                                            <td>
+                                                <input class="btn btn-success" type="submit" value="Update">
+                                            </td>
+                                        </tr>
+
                                     </table>
-                                    <div>
-                                        <input class="btn btn-success" type="submit" value="Save">
-                                    </div>
                                 </fieldset>
                             </form>
+
+
                         </div>
+
 
                     </div>
                 </div>
