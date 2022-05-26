@@ -1,6 +1,9 @@
 package com.codegym.model.employee;
 
+import com.codegym.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Employee {
@@ -25,23 +28,18 @@ public class Employee {
     @JoinColumn(name = "division_id", referencedColumnName = "divisionId")
     private Division divisionId;
 
+    @OneToMany(mappedBy = "employeeId")
+    private List<Contract> contractList;
+
     public Employee() {
     }
 
-    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard,
-                    Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress,
-                    Position positionId, EducationDegree educationDegreeId, Division divisionId) {
-        this.employeeId = employeeId;
-        this.employeeName = employeeName;
-        this.employeeBirthday = employeeBirthday;
-        this.employeeIdCard = employeeIdCard;
-        this.employeeSalary = employeeSalary;
-        this.employeePhone = employeePhone;
-        this.employeeEmail = employeeEmail;
-        this.employeeAddress = employeeAddress;
-        this.positionId = positionId;
-        this.educationDegreeId = educationDegreeId;
-        this.divisionId = divisionId;
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
     }
 
     public Integer getEmployeeId() {

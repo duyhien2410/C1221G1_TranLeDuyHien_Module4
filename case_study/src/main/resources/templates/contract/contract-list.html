@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
+</head>
+<body>
+<header th:replace="~{layout :: css-header}">
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+</nav>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Furama Resort</span>
+                        <span class="section-heading-lower">Hợp đồng</span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="col-xl-10 d-flex me-auto">
+                <div class="bg-faded p-5 rounded">
+                    <div>
+                        <table class="table table-striped">
+                            <caption class="text-black"><h4>Danh sách hợp đồng</h4></caption>
+                            <thead>
+                            <tr class="table-active">
+                                <th>Id</th>
+                                <th>Ngày bắt đầu</th>
+                                <th>Ngày kết thúc</th>
+                                <th>Đặt trước</th>
+                                <th>Tổng tiền</th>
+                                <th>Nhân viên</th>
+                                <th>Khách hàng</th>
+                                <th>Dịch vụ</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-warning" th:each="contractObj :${contracts}">
+                                <td th:text="${contractObj.contractId}"></td>
+                                <td th:text="${contractObj.contractStartDate}"></td>
+                                <td th:text="${contractObj.contractEndDate}"></td>
+                                <td th:text="${contractObj.contractDeposit}"></td>
+                                <td th:text="${contractObj.contractTotalMoney}"></td>
+                                <td th:text="${contractObj.employeeId.employeeName}"></td>
+                                <td th:text="${contractObj.customerId.customerName}"></td>
+                                <td th:text="${contractObj.serviceId.serviceName}"></td>
+
+                            </tr>
+
+                            </tbody>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--            <img class="product-item-title mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" width="700"-->
+            <!--                 th:src="@{/assets/img/contract1.jpg}" alt="..."/>-->
+        </div>
+    </div>
+</section>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+<!--            <div class="product-item-title d-flex">-->
+<!--                <div class="bg-faded p-5 d-flex me-auto rounded">-->
+<!--                    <h2 class="section-heading mb-0">-->
+<!--                        <span class="section-heading-upper">Furama Resort</span>-->
+<!--                        <span class="section-heading-lower">Hợp đồng chi tiết</span>-->
+<!--                    </h2>-->
+<!--                </div>-->
+<!--            </div>-->
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                 th:src="@{/assets/img/contract1.jpg}" alt="..."/>
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded">
+<!--                    <table class="table table-striped">-->
+<!--                        <caption class="text-black"><h4>Danh sách hợp đồng chi tiết</h4></caption>-->
+<!--                        <thead>-->
+<!--                        <tr class="table-active">-->
+<!--                            <th>Id</th>-->
+<!--                            <th>Mã hợp đồng</th>-->
+<!--                            <th>Dịch vụ đi kèm</th>-->
+<!--                            <th>Số lượng</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        <tr class="table-warning" th:each="contractDtObj :${contractDetails}">-->
+<!--                            <td th:text="${contractDtObj.contractDetailId}"></td>-->
+<!--                            <td th:text="${contractDtObj.contractId}"></td>-->
+<!--                            <td th:text="${contractDtObj.attachServiceId}"></td>-->
+<!--                            <td th:text="${contractDtObj.quantity}"></td>-->
+
+<!--                        </tr>-->
+
+<!--                        </tbody>-->
+
+
+<!--                    </table>-->
+                    <p class="mb-0">
+                        Khu nghỉ dưỡng Furama Đà Nẵng là một khu nghỉ dưỡng 5 sao sang trọng, có uy tín và được xem là một trong những biểu tượng của ngành du lịch Việt Nam.
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
+
+<div th:replace="~{layout :: css-body}"></div>
+
+</body>
+</html>

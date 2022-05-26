@@ -1,6 +1,9 @@
 package com.codegym.model.customer;
 
+import com.codegym.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -20,21 +23,18 @@ public class Customer {
     private String customerEmail;
     private String customerAddress;
 
+    @OneToMany(mappedBy = "customerId")
+    List<Contract> contractList;
+
     public Customer() {
     }
 
-    public Customer(Integer customerId, CustomerType customerTypeId, String customerName, String customerBirthday,
-                    Integer gender, String customerIdCard, String customerPhone, String customerEmail,
-                    String customerAddress) {
-        this.customerId = customerId;
-        this.customerTypeId = customerTypeId;
-        this.customerName = customerName;
-        this.customerBirthday = customerBirthday;
-        this.gender = gender;
-        this.customerIdCard = customerIdCard;
-        this.customerPhone = customerPhone;
-        this.customerEmail = customerEmail;
-        this.customerAddress = customerAddress;
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
     }
 
     public Integer getCustomerId() {

@@ -18,42 +18,42 @@
                 <div class="cta-inner bg-faded text-center rounded">
                     <h2 class="section-heading mb-5">
                         <span class="section-heading-upper">Furama Resort</span>
-                        <span class="section-heading-lower">Service</span>
+                        <span class="section-heading-lower">Dịch vụ</span>
                     </h2>
-                    <h4 class="container"><a class="nav-link text-primary" th:href="@{/services}">List of service</a></h4>
+                    <h4 class="container"><a class="nav-link text-primary" th:href="@{/services}">Danh sách dịch vụ</a></h4>
 
                     <div class="list-unstyled list-hours mb-5 text-left mx-auto">
                         <form th:action="@{/services/create}" th:object="${serviceDto}" method="post">
                             <fieldset>
-                                <legend><h3>Create new service</h3></legend>
+                                <legend><h3>Thêm mới dịch vụ</h3></legend>
                                 <table>
 
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Name of service:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Tên dịch vụ:</th>
                                         <td><input class="form-control" th:field="*{serviceName}">
                                             <p style="color: red" th:if="${#fields.hasErrors('serviceName')}"
                                                th:errors="*{serviceName}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Area:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Diện tích:</th>
                                         <td><input class="form-control" width="200" th:field="*{serviceArea}">
                                             <p style="color: red" th:if="${#fields.hasErrors('serviceArea')}"
                                                th:errors="*{serviceArea}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Cost:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Chi phí thuê:</th>
                                         <td><input class="form-control" th:field="*{serviceCost}">
                                             <p style="color: red" th:if="${#fields.hasErrors('serviceCost')}"
                                                th:errors="*{serviceCost}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Max people:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Số người tối đa:</th>
                                         <td><input class="form-control" th:field="*{serviceMaxPeople}">
                                             <p style="color: red" th:if="${#fields.hasErrors('serviceMaxPeople')}"
                                                th:errors="*{serviceMaxPeople}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Rent type:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Kiểu thuê:</th>
                                         <td>
                                             <select class="form-select" th:field="*{rentTypeId}">
                                                 <option th:each="typeObj :${rentType}"
@@ -64,7 +64,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Service type:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Loại dịch vụ:</th>
                                         <td>
                                             <select class="form-select" th:field="*{serviceTypeId}">
                                                 <option th:each="typeObj :${serviceType}"
@@ -75,19 +75,19 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Standard room:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Tiêu chuẩn phòng:</th>
                                         <td><input class="form-control" th:field="*{standardRoom}">
                                             <p style="color: red" th:if="${#fields.hasErrors('standardRoom')}"
                                                th:errors="*{standardRoom}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Other:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Tiện nghi khác:</th>
                                         <td><input class="form-control" th:field="*{descriptionOther}">
                                             <p style="color: red" th:if="${#fields.hasErrors('descriptionOther')}"
                                                th:errors="*{descriptionOther}"></p></td>
                                     </tr>
                                     <tr>
-                                        <th class="list-unstyled-item list-hours-item d-flex">Number of floors:</th>
+                                        <th class="list-unstyled-item list-hours-item d-flex">Số tầng:</th>
                                         <td><input class="form-control" th:field="*{numberOfFloors}">
                                             <p style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}"
                                                th:errors="*{numberOfFloors}"></p></td>
@@ -97,7 +97,7 @@
 
                                 </table>
                                 <div>
-                                    <input class="btn btn-success" type="submit" value="Save">
+                                    <input class="btn btn-success" type="submit" value="Thêm">
                                 </div>
                             </fieldset>
                         </form>

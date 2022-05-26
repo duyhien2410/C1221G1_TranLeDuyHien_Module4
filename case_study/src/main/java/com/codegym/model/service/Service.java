@@ -1,6 +1,9 @@
 package com.codegym.model.service;
 
+import com.codegym.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "services")
@@ -22,6 +25,17 @@ public class Service {
     private String descriptionOther;
     private Double poolArea;
     private Integer numberOfFloors;
+
+    @OneToMany(mappedBy = "serviceId")
+    private List<Contract> contractList;
+
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
+    }
 
     public Service() {
     }

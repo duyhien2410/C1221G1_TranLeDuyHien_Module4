@@ -18,21 +18,20 @@
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
-                            <span class="section-heading-lower">Customer</span>
+                            <span class="section-heading-lower">Khách hàng</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">List of
-                            customer</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">Danh sách khách hàng</a></h4>
 
 
                         <div class="container">
                             <form th:action="@{/customers/edit}" th:object="${customerDto}" method="post">
                                 <fieldset>
-                                    <legend><h3>Update Customer</h3></legend>
+                                    <legend><h3>Chỉnh sửa khách hàng</h3></legend>
                                     <input type="hidden" th:field="*{customerId}">
 
                                     <table>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Customer type:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Kiểu loại khách:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{customerTypeId}">
@@ -44,7 +43,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Name of customer:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Tên khách hàng:</th>
                                             <td>
                                                 <input class="form-control" th:field="*{customerName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerName')}"
@@ -54,7 +53,7 @@
                                         </tr>
                                         <tr>
 
-                                            <th class="list-unstyled-item list-hours-item d-flex">Birthday:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Năm sinh:</th>
                                             <td>
                                                 <input class="form-control" type="date" th:field="*{customerBirthday}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
@@ -64,7 +63,7 @@
 
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Gender:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Giới tính:</th>
                                             <td>
                                                 <select class="form-select" th:field="*{gender}">
                                                     <option value=0>Nữ</option>
@@ -74,7 +73,7 @@
 
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Id card:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Số CMND:</th>
                                             <td>
                                                 <input class="form-control" th:field="*{customerIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}"
@@ -83,7 +82,7 @@
 
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Phone:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Số điện thoại:</th>
                                             <td>
                                                 <input class="form-control" th:field="*{customerPhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}"
@@ -101,7 +100,7 @@
 
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Address:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Địa chỉ:</th>
                                             <td>
                                                 <input class="form-control" th:field="*{customerAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}"
@@ -114,7 +113,7 @@
                                         <tr>
                                             <th class="list-unstyled-item list-hours-item d-flex"></th>
                                             <td>
-                                                <input class="btn btn-success" type="submit" value="Update">
+                                                <input class="btn btn-success" type="submit" value="Xác nhận">
                                             </td>
                                         </tr>
 

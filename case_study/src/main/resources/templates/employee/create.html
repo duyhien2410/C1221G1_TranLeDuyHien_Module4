@@ -18,43 +18,43 @@
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
-                            <span class="section-heading-lower">Employee</span>
+                            <span class="section-heading-lower">Nhân viên</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees}">List of employee</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees}">Danh sách nhân viên</a></h4>
 
                         <div class="container">
                             <form th:action="@{/employees/create}" th:object="${employeeDto}" method="post">
                                 <fieldset>
-                                    <legend><h3>Create new employee</h3></legend>
+                                    <legend><h3>Thêm mới nhân viên</h3></legend>
                                     <table>
 
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Name of employee:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Tên nhân viênt</th>
                                             <td><input class="form-control" th:field="*{employeeName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeName')}"
                                                    th:errors="*{employeeName}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Birthday:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Năm sinh:</th>
                                             <td><input class="form-control" type="date" th:field="*{employeeBirthday}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeBirthday')}"
                                                    th:errors="*{employeeBirthday}"></p></td>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Id card:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Số CMND:</th>
                                             <td><input class="form-control" th:field="*{employeeIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeIdCard')}"
                                                    th:errors="*{employeeIdCard}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Salary:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Lương:</th>
                                             <td><input class="form-control" th:field="*{employeeSalary}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeSalary')}"
                                                    th:errors="*{employeeSalary}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Phone:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Số điện thoại:</th>
                                             <td><input class="form-control" th:field="*{employeePhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeePhone')}"
                                                    th:errors="*{employeePhone}"></p></td>
@@ -66,13 +66,13 @@
                                                    th:errors="*{employeeEmail}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Address:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Địa chỉ:</th>
                                             <td><input class="form-control" th:field="*{employeeAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('employeeAddress')}"
                                                    th:errors="*{employeeAddress}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Position:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Vị trí:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{positionId}">
@@ -84,7 +84,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Education Degree:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Trình độ:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{educationDegreeId}">
@@ -96,7 +96,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th class="list-unstyled-item list-hours-item d-flex">Division:</th>
+                                            <th class="list-unstyled-item list-hours-item d-flex">Bộ phận:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{divisionId}">
@@ -111,7 +111,7 @@
 
                                     </table>
                                     <div>
-                                        <input class="btn btn-success" type="submit" value="Save">
+                                        <input class="btn btn-success" type="submit" value="Thêm">
                                     </div>
                                 </fieldset>
                             </form>

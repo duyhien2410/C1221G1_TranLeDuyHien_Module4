@@ -20,21 +20,20 @@
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
-                            <span class="section-heading-lower">Employee</span>
+                            <span class="section-heading-lower">Nhân viên</span>
                         </h2>
                         <div>
                             <form th:action="@{/employees}">
                                 <div class="row">
                                     <div class="col-xl-2 col-lg-2">
-                                        <input  class="form-control" type="search" name="name" placeholder="search name">
+                                        <input  class="form-control" type="search" name="name" placeholder="Tên nhân viên">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
-                                        <input  class="form-control" type="search" name="email"
-                                                placeholder="search email">
+                                        <input  class="form-control" type="search" name="email" placeholder="Email">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
                                         <select class="form-select" name="division">
-                                            <option value="">--Division--</option>
+                                            <option value="">--Bộ phận--</option>
                                             <option th:each="divObj :${divisions}"
                                                     th:value="${divObj.divisionId}"
                                                     th:text="${divObj.divisionName}">
@@ -42,33 +41,32 @@
                                         </select>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
-                                        <input class="btn btn-success" type="submit" value="search">
+                                        <input class="btn btn-success" type="submit" value="Tìm kiếm">
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees/create}">Create new
-                            employee</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/employees/create}">Thêm mới nhân viên</a></h4>
 
                         <div>
                             <table class="table table-striped">
-                                <caption class="text-black"><h4>List of Employee</h4></caption>
+                                <caption class="text-black"><h4>Danh sách nhân viên</h4></caption>
                                 <thead>
                                 <tr class="table-active">
                                     <th>#</th>
                                     <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Birthday</th>
-                                    <th>Id card</th>
-                                    <th>Salary</th>
-                                    <th>Phone</th>
+                                    <th>Tên</th>
+                                    <th>Năm sinh</th>
+                                    <th>Số CMND</th>
+                                    <th>Lương</th>
+                                    <th>Số ĐT</th>
                                     <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Position</th>
-                                    <th>Degree</th>
-                                    <th>Division</th>
-                                    <th>Delete</th>
-                                    <th>Edit</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Vị trí</th>
+                                    <th>Trình độ</th>
+                                    <th>Bộ phận</th>
+                                    <th>Xoá</th>
+                                    <th>Chỉnh sửa</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -90,12 +88,12 @@
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal"
                                                 th:attr="onclick=|deleteModal('${employeeObj.employeeId}', '${employeeObj.employeeName}')|">
-                                            Delete
+                                            Xoá
                                         </button>
                                     </td>
                                     <td>
                                         <a class="btn btn-warning"
-                                           th:href="@{/employees/edit(id=${employeeObj.employeeId})}">Edit</a>
+                                           th:href="@{/employees/edit(id=${employeeObj.employeeId})}">Sửa</a>
                                     </td>
 
                                 </tr>
@@ -110,7 +108,7 @@
                                 <a th:if="${employees.hasPrevious()}"
                                    th:href="@{/employees(page=${employees.number - 1}, name=${nameVal}, email=${emailVal},
                                    division=${divisionVal})}">
-                                    Previous
+                                    Trước
                                 </a>
                                 <span th:text="${employees.number + 1}"></span>
                                 /
@@ -118,7 +116,7 @@
                                 <a th:if="${employees.hasNext()}"
                                    th:href="@{/employees(page=${employees.number + 1}, name=${nameVal}, email=${emailVal},
                                    division=${divisionVal})}">
-                                    Next
+                                    Sau
                                 </a>
                             </div>
                         </div>

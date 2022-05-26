@@ -18,17 +18,17 @@
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
-                            <span class="section-heading-lower">Customer</span>
+                            <span class="section-heading-lower">Khách hàng</span>
                         </h2>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">List of customer</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers}">Danh sách khách hàng</a></h4>
 
                         <div class="container">
                             <form th:action="@{/customers/create}" th:object="${customerDto}" method="post">
                                 <fieldset>
-                                    <legend><h3>Create new customer</h3></legend>
+                                    <legend><h3>Thêm mới khách hàng</h3></legend>
                                     <table>
                                         <tr>
-                                            <th>Customer type:</th>
+                                            <th>Kiểu loại khách:</th>
                                             <td>
                                                 <select class="form-select" aria-label="Default select example"
                                                         th:field="*{customerTypeId}">
@@ -40,20 +40,20 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Name of customer:</th>
+                                            <th>Tên khách hàng:</th>
                                             <td><input class="form-control" th:field="*{customerName}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerName')}"
                                                    th:errors="*{customerName}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th>Birthday:</th>
+                                            <th>Năm sinh:</th>
                                             <td><input class="form-select" type="date" th:field="*{customerBirthday}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerBirthday')}"
                                                    th:errors="*{customerBirthday}"></p></td>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>Gender:</th>
+                                            <th>Giới tính:</th>
                                             <td>
                                                 <select class="form-select" th:field="*{gender}">
                                                     <option value=0>Nữ</option>
@@ -63,13 +63,13 @@
 <!--                                                   th:errors="*{gender}"></p></td>-->
                                         </tr>
                                         <tr>
-                                            <th>Id card:</th>
+                                            <th>Số CMND:</th>
                                             <td><input class="form-control" th:field="*{customerIdCard}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerIdCard')}"
                                                    th:errors="*{customerIdCard}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th>Phone:</th>
+                                            <th>Số điện thoại:</th>
                                             <td><input class="form-control" th:field="*{customerPhone}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerPhone')}"
                                                    th:errors="*{customerPhone}"></p></td>
@@ -81,7 +81,7 @@
                                                    th:errors="*{customerEmail}"></p></td>
                                         </tr>
                                         <tr>
-                                            <th>Address:</th>
+                                            <th>Địa chỉ:</th>
                                             <td><input class="form-control" th:field="*{customerAddress}">
                                                 <p style="color: red" th:if="${#fields.hasErrors('customerAddress')}"
                                                    th:errors="*{customerAddress}"></p></td>
@@ -91,7 +91,7 @@
 
                                     </table>
                                     <div>
-                                        <input class="btn btn-success" type="submit" value="Save">
+                                        <input class="btn btn-success" type="submit" value="Thêm">
                                     </div>
                                 </fieldset>
                             </form>

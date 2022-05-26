@@ -18,26 +18,26 @@
                 <div class="cta-inner bg-faded text-center rounded">
                     <h2 class="section-heading mb-5">
                         <span class="section-heading-upper">Furama Resort</span>
-                        <span class="section-heading-lower">Service</span>
+                        <span class="section-heading-lower">Dịch vụ</span>
                     </h2>
-                    <h4 class="container"><a class="nav-link text-primary" th:href="@{/services/create}">Create new service</a></h4>
+                    <h4 class="container"><a class="nav-link text-primary" th:href="@{/services/create}">Thêm mới dịch vụ</a></h4>
 
                     <div class="container">
                         <table class="table table-view">
-                            <caption class="text-black"><h4>List of Service</h4></caption>
+                            <caption class="text-black"><h4>Danh sách dịch vụ</h4></caption>
                             <thead>
                             <tr class="table-active">
                                 <th>#</th>
                                 <th>Id</th>
-                                <th>Name</th>
-                                <th>Area</th>
-                                <th>Cost</th>
-                                <th>MaxPeople</th>
-                                <th>RentType</th>
-                                <th>ServiceType</th>
-                                <th>Standard</th>
-                                <th>Other</th>
-                                <th>Floors</th>
+                                <th>Tên</th>
+                                <th>Diện tích</th>
+                                <th>Chi phí</th>
+                                <th>Số người tối đa</th>
+                                <th>Kiểu thuê</th>
+                                <th>Loại dịch vụ</th>
+                                <th>Tiêu chuẩn</th>
+                                <th>Tiện nghi khác</th>
+                                <th>Số tầng</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -54,16 +54,6 @@
                                 <td th:text="${serviceObj.descriptionOther}"></td>
                                 <td th:text="${serviceObj.numberOfFloors}"></td>
 
-                                <!--                                <td>-->
-                                <!--                                    <button>-->
-                                <!--                                        <a th:href="@{/delete(id=${productObj.idProduct})}">Delete</a>-->
-                                <!--                                    </button>-->
-                                <!--                                </td>-->
-                                <!--                                <td>-->
-                                <!--                                    <button>-->
-                                <!--                                        <a th:href="@{/edit(id=${productObj.idProduct})}">Edit</a>-->
-                                <!--                                    </button>-->
-                                <!--                                </td>-->
                             </tr>
 
                             </tbody>
@@ -75,14 +65,14 @@
                         <div>
                             <a th:if="${services.hasPrevious()}"
                                th:href="@{/list(page=${services.number - 1})}">
-                                Previous
+                                Trước
                             </a>
                             <span th:text="${services.number + 1}"></span>
                             /
                             <span th:text="${services.totalPages}"></span>
                             <a th:if="${services.hasNext()}"
                                th:href="@{/list(page=${services.number + 1})}">
-                                Next
+                                Sau
                             </a>
                         </div>
                     </div>

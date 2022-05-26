@@ -20,20 +20,20 @@
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4 container">
                             <span class="section-heading-upper">Furama Resort</span>
-                            <span class="section-heading-lower">Customer</span>
+                            <span class="section-heading-lower">Khách hàng</span>
                         </h2>
                         <div>
                             <form th:action="@{/customers}">
                                 <div class="row">
                                     <div class="col-xl-2 col-lg-2">
-                                        <input class="form-control" type="text" name="name" placeholder="search name">
+                                        <input class="form-control" type="text" name="name" placeholder="Tên khách hàng">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
-                                        <input class="form-control" type="text" name="email" placeholder="search email">
+                                        <input class="form-control" type="text" name="email" placeholder="Email">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
                                         <select class="form-select" name="type">
-                                            <option value="">--Customer type--</option>
+                                            <option value="">--Kiểu loại khách--</option>
                                             <option th:each="typeObj :${customerType}"
                                                     th:value="${typeObj.customerTypeId}"
                                                     th:text="${typeObj.customerTypeName}">
@@ -41,31 +41,30 @@
                                         </select>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
-                                        <input class="btn btn-success" type="submit" value="search">
+                                        <input class="btn btn-success" type="submit" value="Tìm kiếm">
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Create new
-                            customer</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Thêm mới khách hàng</a></h4>
 
                         <div>
                             <table class="table table-striped">
-                                <caption class="text-black"><h4>List of Customer</h4></caption>
+                                <caption class="text-black"><h4>Danh sách khách hàng</h4></caption>
                                 <thead>
                                 <tr class="table-active">
                                     <th>#</th>
                                     <th>Id</th>
-                                    <th>Customer</th>
-                                    <th>Name</th>
-                                    <th>Birthday</th>
-                                    <th>Gender</th>
-                                    <th>Id card</th>
-                                    <th>Phone</th>
+                                    <th>Kiểu loại khách</th>
+                                    <th>Tên</th>
+                                    <th>Năm sinh</th>
+                                    <th>Giới tính</th>
+                                    <th>Số CMND</th>
+                                    <th>Số ĐT</th>
                                     <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Delete</th>
-                                    <th>Edit</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Xoá</th>
+                                    <th>Chỉnh sửa</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -86,12 +85,12 @@
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal"
                                                 th:attr="onclick=|deleteModal('${customerObj.customerId}', '${customerObj.customerName}')|">
-                                            Delete
+                                            Xoá
                                         </button>
                                     </td>
                                     <td>
                                         <a class="btn btn-warning"
-                                           th:href="@{/customers/edit(id=${customerObj.customerId})}">Edit</a>
+                                           th:href="@{/customers/edit(id=${customerObj.customerId})}">Sửa</a>
                                     </td>
 
                                 </tr>
@@ -106,7 +105,7 @@
                                 <a th:if="${customer.hasPrevious()}"
                                    th:href="@{/customers(page=${customer.number - 1}, name=${nameVal}, email=${emailVal},
                                    type=${typeVal})}">
-                                    Previous
+                                    Trước
                                 </a>
                                 <span th:text="${customer.number + 1}"></span>
                                 /
@@ -114,7 +113,7 @@
                                 <a th:if="${customer.hasNext()}"
                                    th:href="@{/customers(page=${customer.number + 1}, name=${nameVal}, email=${emailVal},
                                    type=${typeVal})}">
-                                    Next
+                                    Sau
                                 </a>
                             </div>
                         </div>
