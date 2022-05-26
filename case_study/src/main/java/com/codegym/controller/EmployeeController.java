@@ -78,6 +78,7 @@ public class EmployeeController {
                          BindingResult bindingResult,
                          Model model) {
         new EmployeeDto().validate(employeeDto, bindingResult);
+        employeeDto.setEmployeeCode("NV-"+randomEmployeeCode());
 
         if (bindingResult.hasFieldErrors()) {
             model.addAttribute("divisions", this.divisionService.findAll());
@@ -132,5 +133,18 @@ public class EmployeeController {
         }
 
         return "redirect:/employees";
+    }
+
+    private String randomEmployeeCode() {
+        String result = "";
+        for (int i = 0; i < 4; i++) {
+            result += randomNumber();
+        }
+        return result;
+    }
+
+    private int randomNumber() {
+        int number = (int) Math.round(Math.random() * 9);
+        return number;
     }
 }

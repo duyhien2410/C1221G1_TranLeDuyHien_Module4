@@ -4,32 +4,45 @@ import com.codegym.model.customer.CustomerType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 public class CustomerDto implements Validator {
     private Integer customerId;
+    private String customerCode;
     private CustomerType customerTypeId;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String customerName;
     private String customerBirthday;
     private Integer gender;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Pattern(regexp = "(^\\d{9})|(\\d{12})$", message = "{idcard.invalid}")
     private String customerIdCard;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Pattern(regexp = "^(((090)|(091))\\d{7})|(([(]84[)][+](90)|[(]84[)][+](91))\\d{7})$", message = "{phone.invalid}")
     private String customerPhone;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Email(message = "{email.invalid}")
     private String customerEmail;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String customerAddress;
 
     public CustomerDto() {
     }
 
-    public CustomerDto(Integer customerId, CustomerType customerTypeId, String customerName, String customerBirthday,
-                       Integer gender, String customerIdCard, String customerPhone, String customerEmail,
-                       String customerAddress) {
-        this.customerId = customerId;
-        this.customerTypeId = customerTypeId;
-        this.customerName = customerName;
-        this.customerBirthday = customerBirthday;
-        this.gender = gender;
-        this.customerIdCard = customerIdCard;
-        this.customerPhone = customerPhone;
-        this.customerEmail = customerEmail;
-        this.customerAddress = customerAddress;
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
     public Integer getCustomerId() {

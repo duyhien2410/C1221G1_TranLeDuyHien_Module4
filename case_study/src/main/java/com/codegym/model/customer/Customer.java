@@ -10,6 +10,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer customerId;
+    private String customerCode;
     @ManyToOne
     @JoinColumn(name = "customer_type_id",referencedColumnName = "customerTypeId")
     private CustomerType customerTypeId;
@@ -27,6 +28,14 @@ public class Customer {
     List<Contract> contractList;
 
     public Customer() {
+    }
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
     public List<Contract> getContractList() {

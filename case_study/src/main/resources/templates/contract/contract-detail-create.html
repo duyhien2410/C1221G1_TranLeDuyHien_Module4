@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <th:block th:replace="~{layout :: css-layout}"></th:block>
+</head>
+<body>
+<header th:replace="~{layout :: css-header}">
+</header>
+
+<nav th:replace="~{layout :: css-nav}">
+</nav>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Furama Resort</span>
+                        <span class="section-heading-lower">Hợp đồng chi tiết</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                 th:src="@{/assets/img/contract.jpg}" alt="..."/>
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded">
+                    <form th:action="@{/contract-detail/create}" th:object="${contractDetailDto}" method="post">
+                        <fieldset>
+                            <legend><h3>Thêm mới hợp đồng chi tiết</h3></legend>
+                            <table>
+                                <tr>
+                                    <th>Mã hợp đồng:</th>
+                                    <td><input class="form-control" th:field="*{contractId}">
+                                        <p style="color: red" th:if="${#fields.hasErrors('contractId')}"
+                                           th:errors="*{contractId}"></p></td>
+                                </tr>
+                                <tr>
+                                    <th>Dịch vụ đi kèm:</th>
+                                    <td>
+                                        <select class="form-select" aria-label="Default select example"
+                                                th:field="*{attachServiceId}">
+                                            <option th:each="typeObj :${attachService}"
+                                                    th:value="${typeObj.attachServiceId}"
+                                                    th:text="${typeObj.attachServiceName}">
+                                            </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Số lượng:</th>
+                                    <td><input class="form-select" th:field="*{quantity}">
+                                        <p style="color: red" th:if="${#fields.hasErrors('quantity')}"
+                                           th:errors="*{quantity}"></p></td>
+                                    </td>c
+                                </tr>
+                            </table>
+                            <div>
+                                <input class="btn btn-success" type="submit" value="Thêm">
+                            </div>
+                        </fieldset>
+                    </form>
+                    <p class="mb-0">
+                        Khu nghỉ dưỡng Furama Đà Nẵng là một khu nghỉ dưỡng 5 sao sang trọng, có uy tín và được xem là
+                        một trong những biểu tượng của ngành du lịch Việt Nam.
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer th:replace="~{layout :: css-footer}">
+</footer>
+
+<div th:replace="~{layout :: css-body}"></div>
+
+</body>
+</html>

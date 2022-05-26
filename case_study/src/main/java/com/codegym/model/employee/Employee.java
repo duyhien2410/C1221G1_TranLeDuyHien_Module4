@@ -10,6 +10,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;
+    private String employeeCode;
     private String employeeName;
     private String employeeBirthday;
     private String employeeIdCard;
@@ -32,6 +33,14 @@ public class Employee {
     private List<Contract> contractList;
 
     public Employee() {
+    }
+
+    public String getEmployeeCode() {
+        return employeeCode;
+    }
+
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
     }
 
     public List<Contract> getContractList() {

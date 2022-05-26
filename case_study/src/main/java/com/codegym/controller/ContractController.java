@@ -1,7 +1,11 @@
 package com.codegym.controller;
 
 import com.codegym.dto.contract.ContractDto;
+import com.codegym.model.contract.AttachService;
 import com.codegym.model.contract.Contract;
+import com.codegym.model.contract.ContractDetail;
+import com.codegym.model.customer.Customer;
+import com.codegym.model.service.Service;
 import com.codegym.service.contract.IContractService;
 import com.codegym.service.customer.ICustomerService;
 import com.codegym.service.employee.IEmployeeService;
@@ -42,8 +46,8 @@ public class ContractController {
 
     @GetMapping("/create")
     public String goCreate(Model model) {
-        model.addAttribute("customers", this.customerService.findAll());
         model.addAttribute("employees", this.employeeService.findAll());
+        model.addAttribute("customers", this.customerService.findAll());
         model.addAttribute("services", this.serviceService.findAll());
         model.addAttribute("contractDto", new ContractDto());
 
@@ -57,8 +61,8 @@ public class ContractController {
         new ContractDto().validate(contractDto, bindingResult);
 
         if (bindingResult.hasFieldErrors()) {
-            model.addAttribute("customers", this.customerService.findAll());
             model.addAttribute("employees", this.employeeService.findAll());
+            model.addAttribute("customers", this.customerService.findAll());
             model.addAttribute("services", this.serviceService.findAll());
             return "contract/contract-create";
         } else {

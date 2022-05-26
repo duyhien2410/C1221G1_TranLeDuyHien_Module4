@@ -53,8 +53,8 @@
                                 <caption class="text-black"><h4>Danh sách nhân viên</h4></caption>
                                 <thead>
                                 <tr class="table-active">
-                                    <th>#</th>
-                                    <th>Id</th>
+                                    <th>ID</th>
+                                    <th>Mã NV</th>
                                     <th>Tên</th>
                                     <th>Năm sinh</th>
                                     <th>Số CMND</th>
@@ -70,9 +70,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="table-warning" th:each="employeeObj, no :${employees}">
-                                    <td th:text="${no.count}"></td>
+                                <tr class="table-warning" th:each="employeeObj :${employees}">
                                     <td th:text="${employeeObj.employeeId}"></td>
+                                    <td th:text="${employeeObj.employeeCode}"></td>
                                     <td th:text="${employeeObj.employeeName}"></td>
                                     <td th:text="${employeeObj.employeeBirthday}"></td>
                                     <td th:text="${employeeObj.employeeIdCard}"></td>

@@ -6,14 +6,33 @@ import com.codegym.model.employee.Position;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.*;
+
 public class EmployeeDto implements Validator {
     private Integer employeeId;
+    private String employeeCode;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String employeeName;
     private String employeeBirthday;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Pattern(regexp = "(^\\d{9})|(\\d{12})$", message = "{idcard.invalid}")
     private String employeeIdCard;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 1, message = "{number.invalid}")
     private Double employeeSalary;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Pattern(regexp = "^(((090)|(091))\\d{7})|(([(]84[)][+](90)|[(]84[)][+](91))\\d{7})$", message = "{phone.invalid}")
     private String employeePhone;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Email(message = "{email.invalid}")
     private String employeeEmail;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String employeeAddress;
     private Position positionId;
     private EducationDegree educationDegreeId;
@@ -22,18 +41,12 @@ public class EmployeeDto implements Validator {
     public EmployeeDto() {
     }
 
-    public EmployeeDto(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Position positionId, EducationDegree educationDegreeId, Division divisionId) {
-        this.employeeId = employeeId;
-        this.employeeName = employeeName;
-        this.employeeBirthday = employeeBirthday;
-        this.employeeIdCard = employeeIdCard;
-        this.employeeSalary = employeeSalary;
-        this.employeePhone = employeePhone;
-        this.employeeEmail = employeeEmail;
-        this.employeeAddress = employeeAddress;
-        this.positionId = positionId;
-        this.educationDegreeId = educationDegreeId;
-        this.divisionId = divisionId;
+    public String getEmployeeCode() {
+        return employeeCode;
+    }
+
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
     }
 
     public Integer getEmployeeId() {

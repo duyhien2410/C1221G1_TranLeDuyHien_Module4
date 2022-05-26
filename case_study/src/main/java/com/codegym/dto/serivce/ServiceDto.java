@@ -5,17 +5,43 @@ import com.codegym.model.service.ServiceType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 public class ServiceDto implements Validator {
     private Integer serviceId;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String serviceName;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 1, message = "{number.invalid}")
     private Integer serviceArea;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 1, message = "{number.invalid}")
     private Double serviceCost;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 1, message = "{number.invalid}")
     private Integer serviceMaxPeople;
     private RentType rentTypeId;
     private ServiceType serviceTypeId;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String standardRoom;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
     private String descriptionOther;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 0, message = "{number2.invalid}")
     private Double poolArea;
+    @NotEmpty(message = "{empty.invalid}")
+    @NotBlank(message = "{blank.invalid}")
+    @Min(value = 0, message = "{number2.invalid}")
     private Integer numberOfFloors;
 
     public ServiceDto() {

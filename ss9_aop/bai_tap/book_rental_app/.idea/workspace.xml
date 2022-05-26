@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97ec3783-d05a-4250-946c-d5cbca81ca79" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-detail-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/ContractDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/ContractDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/dto/customer/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/dto/customer/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/dto/employee/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/dto/employee/EmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/contract/IContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/contract/IContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/contract/impl/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/codegym/service/contract/impl/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contractDetail-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/contract/contract-detail-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_spring_mvc/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +115,7 @@
       <workItem from="1653276827825" duration="3117000" />
       <workItem from="1653288132786" duration="2454000" />
       <workItem from="1653302895638" duration="2000" />
+      <workItem from="1653548166936" duration="1349000" />
     </task>
     <servers />
   </component>

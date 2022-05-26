@@ -66,6 +66,7 @@ public class CustomerController {
                          BindingResult bindingResult,
                          Model model) {
         new CustomerDto().validate(customerDto, bindingResult);
+        customerDto.setCustomerCode("KH-"+randomCustomerCode());
 
         if (bindingResult.hasFieldErrors()) {
             model.addAttribute("customerType", this.customerTypeService.findAll());
@@ -116,5 +117,17 @@ public class CustomerController {
         return "redirect:/customers";
     }
 
+    private String randomCustomerCode() {
+        String result = "";
+        for (int i = 0; i < 4; i++) {
+            result += randomNumber();
+        }
+        return result;
+    }
+
+    private int randomNumber() {
+        int number = (int) Math.round(Math.random() * 9);
+        return number;
+    }
 
 }
