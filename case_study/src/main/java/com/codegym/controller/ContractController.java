@@ -1,11 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.dto.contract.ContractDto;
-import com.codegym.model.contract.AttachService;
 import com.codegym.model.contract.Contract;
-import com.codegym.model.contract.ContractDetail;
-import com.codegym.model.customer.Customer;
-import com.codegym.model.service.Service;
 import com.codegym.service.contract.IContractService;
 import com.codegym.service.customer.ICustomerService;
 import com.codegym.service.employee.IEmployeeService;
@@ -34,6 +30,7 @@ public class ContractController {
 
     @Autowired
     private IServiceService serviceService;
+
 
     @GetMapping()
     public String goListContract(Model model,
@@ -72,5 +69,12 @@ public class ContractController {
         }
 
         return "redirect:/contracts";
+    }
+
+    @GetMapping("/use-service")
+    public String goList(Model model){
+        model.addAttribute("useService", this.contractService.getList());
+
+        return "contract/list";
     }
 }

@@ -26,19 +26,28 @@
                             <form th:action="@{/customers}">
                                 <div class="row">
                                     <div class="col-xl-2 col-lg-2">
-                                        <input class="form-control" type="text" name="name" placeholder="Tên khách hàng">
+                                        <input class="form-control" type="text" name="name"
+                                               placeholder="Tên khách hàng">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
                                         <input class="form-control" type="text" name="email" placeholder="Email">
                                     </div>
                                     <div class="col-xl-2 col-lg-2">
-                                        <select class="form-select" name="type">
-                                            <option value="">--Kiểu loại khách--</option>
+                                        <!--                                        <select class="form-select" name="type">-->
+                                        <!--                                            <option value="">&#45;&#45;Kiểu loại khách&#45;&#45;</option>-->
+                                        <!--                                            <option th:each="typeObj :${customerType}"-->
+                                        <!--                                                    th:value="${typeObj.customerTypeId}"-->
+                                        <!--                                                    th:text="${typeObj.customerTypeName}">-->
+                                        <!--                                            </option>-->
+                                        <!--                                        </select>-->
+                                        <!--                                        <label for="exampleDataList" class="form-label">Datalist example</label>-->
+                                        <input class="form-select" name="type" list="datalistOptions"
+                                               placeholder="Type to search...">
+                                        <datalist id="datalistOptions">
                                             <option th:each="typeObj :${customerType}"
                                                     th:value="${typeObj.customerTypeId}"
-                                                    th:text="${typeObj.customerTypeName}">
-                                            </option>
-                                        </select>
+                                                    th:text="${typeObj.customerTypeName}"></option>
+                                        </datalist>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
                                         <input class="btn btn-success" type="submit" value="Tìm kiếm">
@@ -46,7 +55,8 @@
                                 </div>
                             </form>
                         </div>
-                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Thêm mới khách hàng</a></h4>
+                        <h4 class="container"><a class="nav-link text-primary" th:href="@{/customers/create}">Thêm mới
+                            khách hàng</a></h4>
 
                         <div>
                             <table class="table table-striped">
@@ -154,6 +164,8 @@
         document.getElementById("id-remove").value = id;
         document.getElementById("name").innerText = customerName;
     }
+
+
 </script>
 
 <footer th:replace="~{layout :: css-footer}">

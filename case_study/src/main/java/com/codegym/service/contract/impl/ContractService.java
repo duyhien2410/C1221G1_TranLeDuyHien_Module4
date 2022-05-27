@@ -1,5 +1,6 @@
 package com.codegym.service.contract.impl;
 
+import com.codegym.dto.ICustomerUseService;
 import com.codegym.model.contract.Contract;
 import com.codegym.repository.contract.IContractRepository;
 import com.codegym.service.contract.IContractService;
@@ -28,5 +29,10 @@ public class ContractService implements IContractService {
     @Override
     public List<Contract> findAll() {
         return this.contractRepository.findAll();
+    }
+
+    @Override
+    public List<ICustomerUseService> getList() {
+        return this.contractRepository.getList();
     }
 }
